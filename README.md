@@ -63,6 +63,25 @@ This is the business logic layer that standardizes how the client fetches and fi
 6. The LLM answers the question in plain business language.
 7. The user receives a concise summary or recommendation, without seeing the technical workflow.
 
+### Flow chart
+
+```mermaid
+flowchart LR
+  A[Feedback workbook] --> B[Client.py]
+  B --> C{Choose model provider}
+  C -->|Google Gemini| D[Gemini API]
+  C -->|Ollama| E[Local Ollama model]
+  B <--> F[Server.py MCP server]
+  F --> G[Load feedback resource]
+  G --> H[Filter by category or sentiment]
+  H --> I[Build analysis prompt]
+  I --> D
+  I --> E
+  D --> J[Business insight]
+  E --> J
+  J --> K[User]
+```
+
 ## Files in the project
 
 - `Client.py` — conversational frontend and orchestration logic
