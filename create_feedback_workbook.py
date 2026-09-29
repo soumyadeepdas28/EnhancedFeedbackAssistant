@@ -56,6 +56,56 @@ records = [
     ("Customer Assistance", 4, "The response included useful instructions and next steps.", "Positive"),
     ("Customer Assistance", 3, "Weekend support availability should be extended.", "Neutral"),
     ("Customer Assistance", 5, "The team followed up to confirm that my issue was resolved.", "Positive"),
+    ("Application UI", 2, "The search results occasionally disappear after I change the dates.", "Negative"),
+    ("Application UI", 2, "The mobile menu closes before I can select an option.", "Negative"),
+    ("Application UI", 1, "The booking page freezes when I try to compare rooms.", "Negative"),
+    ("Application UI", 2, "The availability calendar shows rooms that cannot be booked.", "Negative"),
+    ("Application UI", 2, "The filter controls are difficult to use on a small screen.", "Negative"),
+    ("Application UI", 1, "My selected hotel was lost when I returned to the search results.", "Negative"),
+    ("Application UI", 2, "The page displayed an error while loading room details.", "Negative"),
+    ("Application UI", 2, "The sort order resets whenever I open a room listing.", "Negative"),
+    ("Application UI", 1, "The checkout button was unresponsive for several minutes.", "Negative"),
+    ("Application UI", 2, "Important booking information is hidden below an unclear link.", "Negative"),
+    ("User-friendly", 2, "The instructions were confusing when I tried to change my dates.", "Negative"),
+    ("User-friendly", 2, "I could not understand which fields were required on the booking form.", "Negative"),
+    ("User-friendly", 1, "The sign-up process rejected my details without explaining why.", "Negative"),
+    ("User-friendly", 2, "Cancellation options were difficult to find before payment.", "Negative"),
+    ("User-friendly", 2, "The wording on the checkout page caused me to enter information twice.", "Negative"),
+    ("User-friendly", 1, "The application gave no useful guidance after my booking failed.", "Negative"),
+    ("User-friendly", 2, "It was unclear whether my reservation had been confirmed.", "Negative"),
+    ("User-friendly", 2, "The help text did not explain the required document format.", "Negative"),
+    ("User-friendly", 1, "I had to restart the reservation several times to complete it.", "Negative"),
+    ("User-friendly", 2, "The checkout terminology was confusing and inconsistent.", "Negative"),
+    ("Billing", 2, "The payment page rejected my card without giving a clear reason.", "Negative"),
+    ("Billing", 1, "A service charge appeared only after I entered my payment details.", "Negative"),
+    ("Billing", 2, "The refund amount did not match the amount shown in the cancellation summary.", "Negative"),
+    ("Billing", 2, "The invoice contained an incorrect company name.", "Negative"),
+    ("Billing", 1, "My payment was taken but the reservation was not created.", "Negative"),
+    ("Billing", 2, "The exchange rate used at checkout was not clearly disclosed.", "Negative"),
+    ("Billing", 2, "The deposit hold remained on my account longer than promised.", "Negative"),
+    ("Billing", 1, "I received duplicate receipts for one booking.", "Negative"),
+    ("Billing", 2, "The total changed again when I selected a different payment method.", "Negative"),
+    ("Billing", 1, "Support could not explain an unexpected charge on my statement.", "Negative"),
+    ("Rooms", 2, "The room was not ready when I arrived for check-in.", "Negative"),
+    ("Rooms", 1, "The room had a strong odor that staff did not resolve.", "Negative"),
+    ("Rooms", 2, "Several advertised amenities were missing from the room.", "Negative"),
+    ("Rooms", 2, "The heating system stopped working during the night.", "Negative"),
+    ("Rooms", 1, "The room was not cleaned properly before my arrival.", "Negative"),
+    ("Rooms", 2, "Construction noise made it difficult to sleep.", "Negative"),
+    ("Rooms", 2, "The room description overstated the size and available space.", "Negative"),
+    ("Rooms", 1, "The shower had low water pressure and inconsistent temperature.", "Negative"),
+    ("Rooms", 2, "The requested room arrangement was not available at check-in.", "Negative"),
+    ("Rooms", 1, "The air conditioning leaked water onto the floor.", "Negative"),
+    ("Customer Assistance", 2, "My support request received no response for two days.", "Negative"),
+    ("Customer Assistance", 1, "The first agent closed my case without resolving the issue.", "Negative"),
+    ("Customer Assistance", 2, "I had to repeat the same problem to several agents.", "Negative"),
+    ("Customer Assistance", 2, "The help center provided outdated instructions.", "Negative"),
+    ("Customer Assistance", 1, "The support chat disconnected before my issue was resolved.", "Negative"),
+    ("Customer Assistance", 2, "No one followed up after promising to investigate the problem.", "Negative"),
+    ("Customer Assistance", 1, "The agent gave incorrect information about the cancellation policy.", "Negative"),
+    ("Customer Assistance", 2, "It was impossible to reach a human agent through the help center.", "Negative"),
+    ("Customer Assistance", 2, "My complaint was transferred without any explanation.", "Negative"),
+    ("Customer Assistance", 1, "The support team refused to investigate an incorrect charge.", "Negative"),
 ]
 
 categories = ["Application UI", "User-friendly", "Billing", "Rooms", "Customer Assistance"]
@@ -101,7 +151,7 @@ def worksheet_xml():
   <sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/><selection pane="bottomLeft" activeCell="A2" sqref="A2"/></sheetView></sheetViews>
   {dimension}
   <sheetData>{"".join(rows)}</sheetData>
-  <autoFilter ref="A1:F51"/>
+    <autoFilter ref="A1:F101"/>
 </worksheet>'''
 
 def summary_xml():
